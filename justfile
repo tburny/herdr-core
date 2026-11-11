@@ -95,7 +95,7 @@ release-prepare version:
     git commit -m "chore: release {{version}}"
     @echo "v{{version}} prepared. Review it, then: just release-publish {{version}}"
 
-# Push master, wait for its CI to pass, then push the tag (starts the release). Red CI publishes nothing.
+# Push master, wait for its CI to pass, then start the release on master. It builds, then tags. Red CI publishes nothing.
 [unix]
 release-publish version:
     @[ -z "$(git status --porcelain)" ] || { echo "error: working tree must be clean"; exit 1; }
@@ -109,6 +109,5 @@ release-publish version:
     done; \
     [ -n "$run" ] || { echo "error: no CI run for $sha"; exit 1; }; \
     gh run watch "$run" --exit-status --interval 30 || { echo "error: CI failed; nothing published"; exit 1; }
-    git tag v{{version}}
-    git push origin v{{version}}
-    @echo "v{{version}} tagged: the release workflow builds and publishes it"
+    gh workflow run release --ref master -f publish=true -f sha="$(git rev-parse HEAD)"
+    @echo "release started: it builds, tags v{{version}} with nix/pins.json, and publishes. gh run watch shows it"
