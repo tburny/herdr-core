@@ -1,21 +1,21 @@
 {
-  "version": "0.1.20",
+  "version": "0.1.99",
   "assets": {
     "aarch64-darwin": {
       "name": "herdr-core-macos-aarch64.tar.gz",
-      "hash": "sha256-5YmF0/726QnzPTxaRCbkiYyBVkpVfUY2WRzsnjoGryY="
+      "hash": "sha256-pwx2My+HJk9/SeAN7cLdZGEvoZdDOvjrXWliT61v+FM="
     },
     "aarch64-linux": {
       "name": "herdr-core-linux-aarch64.tar.gz",
-      "hash": "sha256-XzA3N50VzHbPxy0v0aQmLqHFsk3yeL98/Yrc/3uRSGI="
+      "hash": "sha256-O2PQ0h195aBtNEVq32iqLR9cjME8hGbUI8dEXn+ADJw="
     },
     "x86_64-darwin": {
       "name": "herdr-core-macos-x86_64.tar.gz",
-      "hash": "sha256-NsAzHD/+oP+q2hlbiaPHSW9/P8W/NeRgXBnITlwgWlY="
+      "hash": "sha256-DZ6/F20wEV1qYQqwtDkxYElMhJRWFkBs1nDnVpvLh2I="
     },
     "x86_64-linux": {
       "name": "herdr-core-linux-x86_64.tar.gz",
-      "hash": "sha256-rGuGiQxFGjdYRiCqpDi3G8DQvUMKLnwdfglfBSxBTnQ="
+      "hash": "sha256-0xFi/H1sslO1yDIdnfPg9hRBeZ0pO5QhWm+f9ualjhY="
     }
   }
 }
